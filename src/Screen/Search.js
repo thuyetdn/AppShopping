@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default class Product extends Component {
+export default class Search extends Component {
   render() {
     return (
       <View style={styles.container}>
