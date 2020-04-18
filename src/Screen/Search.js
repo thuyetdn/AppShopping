@@ -33,10 +33,18 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   searchbar: {
-    flex: 0.65,
+    flex: 0.7,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   mainbar: {
-    flex: 8.35,
+    flex: 8.3,
     backgroundColor: '#E1E1E1',
   },
   textinputcontainer: {
@@ -46,7 +54,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgb(238,237,237)',
   },
   textinput: {
-    backgroundColor:'white',
+    backgroundColor: 'white',
     height: 45,
     width: 390,
     padding: 10,
@@ -65,16 +73,43 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     zIndex: 1,
   },
-  phan1menubar: {
-    height: height * 0.35,
+  phanmenubar: {
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    margin: 10,
+    backgroundColor: 'white',
+  },
+  productContainer: {
+    width: 170,
+    height: 230,
     backgroundColor: 'white',
     margin: 10,
-    shadowColor: '#605A5E',
-    shadowOffset: {width: 0, height: 3},
-    shadowOpacity: 0.2,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+  productImage: {
+    width: 170,
+    height: 180,
+  },
+  texproduct: {
+    fontSize: 20,
+  },
+  textprice: {
+    fontSize: 15,
+    color: 'green',
   },
 });
-
+const {width} = Dimensions.get('window');
+const productWidth = (width - 50) / 2;
+const productImageHeight = (productWidth / 361) * 452;
 export default class Search extends Component {
   render() {
     return (
@@ -92,7 +127,7 @@ export default class Search extends Component {
               </TouchableOpacity>
             </View>
             <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('Login')}>
+              onPress={() => this.props.navigation.navigate('Cart')}>
               <View style={{justifyContent: 'flex-end'}}>
                 <View style={styles.carticon}>
                   <Text>0</Text>
@@ -112,7 +147,74 @@ export default class Search extends Component {
         </View>
         <View style={styles.mainbar}>
           <ScrollView>
-            
+            <View style={styles.phanmenubar}>
+              <TouchableOpacity
+                onPress={() => this.props.navigation.navigate('Home')}>
+                <View style={styles.productContainer}>
+                  <Image
+                    source={require('../Image/ao1.jpg')}
+                    style={styles.productImage}
+                  />
+                  <Text style={styles.texproduct}>Áo Thun</Text>
+                  <Text style={styles.textprice}>20$</Text>
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => this.props.navigation.navigate('Home')}>
+                <View style={styles.productContainer}>
+                  <Image
+                    source={require('../Image/ao1.jpg')}
+                    style={styles.productImage}
+                  />
+                  <Text style={styles.texproduct}>Áo Thun</Text>
+                  <Text style={styles.textprice}>20$</Text>
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => this.props.navigation.navigate('Home')}>
+                <View style={styles.productContainer}>
+                  <Image
+                    source={require('../Image/ao1.jpg')}
+                    style={styles.productImage}
+                  />
+                  <Text style={styles.texproduct}>Áo Thun</Text>
+                  <Text style={styles.textprice}>20$</Text>
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => this.props.navigation.navigate('Home')}>
+                <View style={styles.productContainer}>
+                  <Image
+                    source={require('../Image/ao1.jpg')}
+                    style={styles.productImage}
+                  />
+                  <Text style={styles.texproduct}>Áo Thun</Text>
+                  <Text style={styles.textprice}>20$</Text>
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => this.props.navigation.navigate('Home')}>
+                <View style={styles.productContainer}>
+                  <Image
+                    source={require('../Image/ao1.jpg')}
+                    style={styles.productImage}
+                  />
+                  <Text style={styles.texproduct}>Áo Thun</Text>
+                  <Text style={styles.textprice}>20$</Text>
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => this.props.navigation.navigate('Home')}>
+                <View style={styles.productContainer}>
+                  <Image
+                    source={require('../Image/ao1.jpg')}
+                    style={styles.productImage}
+                  />
+                  <Text style={styles.texproduct}>Áo Thun</Text>
+                  <Text style={styles.textprice}>20$</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
           </ScrollView>
         </View>
       </View>

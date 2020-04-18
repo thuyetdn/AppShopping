@@ -33,10 +33,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   searchbar: {
-    flex: 0.7,
+    flex: 0.65,
   },
   mainbar: {
-    flex: 8.3,
+    flex: 8.35,
     backgroundColor: '#E1E1E1',
   },
   textinputcontainer: {
@@ -73,14 +73,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginRight: 11,
     marginTop: 10,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
+    shadowColor: '#605A5E',
   },
   back: {
     height: 45,
@@ -93,44 +86,32 @@ const styles = StyleSheet.create({
     width: 285,
     alignItems: 'center',
     justifyContent: 'center',
-    
   },
   sanpham: {
-    height: 200,
+    height: height * 0.35,
     backgroundColor: 'white',
     flexDirection: 'row',
     marginLeft: 10,
     marginRight: 10,
+    alignContent: 'center',
     marginTop: 10,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
-    
   },
   imageproduct: {
-    height: 180,
-    width: 120,
+    height: 220,
+    width: 100,
     backgroundColor: 'white',
+    alignContent: 'center',
     justifyContent: 'center',
-    marginTop:10,
-    marginLeft:20,
-    marginRight:10
+    margin: 10,
   },
   communicationProduct: {
-    height: 140,
+    height: 160,
     width: 200,
     backgroundColor: 'white',
-    marginTop:30,
+    marginTop: 40,
+    marginEnd: 40,
     justifyContent: 'space-between',
   },
-  sizeimage:{
-    width: 120, height: 160
-  }
 });
 
 export default class Product extends Component {
@@ -182,14 +163,14 @@ export default class Product extends Component {
                   </TouchableOpacity>
                 </View>
                 <View style={styles.texttieude}>
-                  <Text style={{fontSize: 30, color: 'grey'}}>Product</Text>
+                  <Text style={{fontSize: 30, color: 'grey'}}>Top Selling Products</Text>
                 </View>
               </View>
               <View style={styles.sanpham}>
                 <View style={styles.imageproduct}>
                   <Image
                     source={require('../Image/ao1.jpg')}
-                    style={styles.sizeimage}
+                    style={{width: 100, height: 120}}
                   />
                 </View>
                 <View style={styles.communicationProduct}>
@@ -209,7 +190,7 @@ export default class Product extends Component {
                 <View style={styles.imageproduct}>
                   <Image
                     source={require('../Image/ao2.jpg')}
-                    style={styles.sizeimage}
+                    style={{width: 100, height: 120}}
                   />
                 </View>
                 <View style={styles.communicationProduct}>
@@ -229,7 +210,7 @@ export default class Product extends Component {
                 <View style={styles.imageproduct}>
                   <Image
                     source={require('../Image/ao3.jpg')}
-                    style={styles.sizeimage}
+                    style={{width: 100, height: 120}}
                   />
                 </View>
                 <View style={styles.communicationProduct}>

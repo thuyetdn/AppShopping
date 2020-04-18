@@ -134,11 +134,16 @@ export default class Login extends Component {
                   Login with Facebook
                 </Text>
               </TouchableOpacity>
+              <Divider style={styles.devider} />
+              <TouchableOpacity
+                style={styles.loginbutton}
+                onPress={() => this.props.navigation.navigate('SignUp')}>
+                <Text style={styles.loginbuttontitle}>SignUp</Text>
+              </TouchableOpacity>
             </View>
           </View>
         </ImageBackground>
       </TouchableNativeFeedback>
-      
     );
   }
 }

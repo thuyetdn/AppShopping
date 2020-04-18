@@ -14,7 +14,6 @@ import {
 } from 'react-native';
 import {TextInput} from 'react-native-gesture-handler';
 import Swiper from 'react-native-web-swiper';
-
 const {height} = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
@@ -33,10 +32,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   searchbar: {
-    flex: 0.65,
+    flex: 0.7,
   },
   mainbar: {
-    flex: 8.35,
+    flex: 8.3,
     backgroundColor: '#E1E1E1',
   },
   textinputcontainer: {
@@ -46,7 +45,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgb(238,237,237)',
   },
   textinput: {
-    backgroundColor:'white',
+    backgroundColor: 'white',
     height: 45,
     width: 390,
     padding: 10,
@@ -69,9 +68,14 @@ const styles = StyleSheet.create({
     height: height * 0.35,
     backgroundColor: 'white',
     margin: 10,
-    shadowColor: '#605A5E',
-    shadowOffset: {width: 0, height: 3},
-    shadowOpacity: 0.2,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
 });
 
@@ -92,7 +96,7 @@ export default class Main extends Component {
               </TouchableOpacity>
             </View>
             <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('Product')}>
+              onPress={() => this.props.navigation.navigate('Cart')}>
               <View style={{justifyContent: 'flex-end'}}>
                 <View style={styles.carticon}>
                   <Text>0</Text>
@@ -179,7 +183,7 @@ export default class Main extends Component {
               </View>
             </View>
             <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('Product')}>
+              onPress={() => this.props.navigation.navigate('TopProduct')}>
               <View style={styles.phan1menubar}>
                 <View style={{height: 40}}>
                   <Text style={{fontSize: 28, color: 'grey'}}>Top Product</Text>

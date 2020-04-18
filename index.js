@@ -18,7 +18,8 @@ import SignUp from './src/Screen/SignUp';
 import Contact from './src/Screen/Contact';
 import Search from './src/Screen/Search';
 import Product from './src/Screen/Product';
-
+import TopProduct from './src/Screen/TopProduct';
+import Cart from './src/Screen/Cart';
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -86,7 +87,7 @@ function CustomDrawer(props, isLogin) {
           <Text style={{fontSize: 20}}> Home</Text>
         </View>
       </TouchableOpacity>
-      <TouchableOpacity >
+      <TouchableOpacity>
         <View
           style={{
             flexDirection: 'row',
@@ -102,7 +103,7 @@ function CustomDrawer(props, isLogin) {
       </TouchableOpacity>
     </View>
   );
-  const mainJ = isLogin ?  LoginJ : LogoutJ;
+  const mainJ = isLogin ? LoginJ : LogoutJ;
   return (
     <View style={styles.container}>
       <View style={styles.iconmenu}>
@@ -135,7 +136,7 @@ function TabNavigator() {
       tabBarOptions={{
         activeTintColor: 'black',
         inactiveTintColor: 'gray',
-        activeBackgroundColor:'#D7D8D9'
+        activeBackgroundColor: '#D7D8D9',
       }}>
       <Tab.Screen name="Home" component={Main} />
       <Tab.Screen name="Search" component={Search} />
@@ -150,6 +151,7 @@ function DrawerNavigator() {
       drawerContent={props => CustomDrawer(props)}>
       <Drawer.Screen name="MenuTab" component={TabNavigator} />
       <Drawer.Screen name="Product" component={Product} />
+      <Drawer.Screen name="TopProduct" component={TopProduct} />
     </Drawer.Navigator>
   );
 }
@@ -170,6 +172,9 @@ export default class MyApp extends Component {
           <Stack.Screen name="Search" component={Search} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Product" component={Product} />
+          <Stack.Screen name="TopProduct" component={TopProduct} />
+          <Stack.Screen name="SignUp" component={SignUp} />
+          <Stack.Screen name="Cart" component={Cart} />
         </Stack.Navigator>
       </NavigationContainer>
     );
